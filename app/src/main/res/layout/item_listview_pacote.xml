@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cancun" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_pacote_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Pacote Cancún" />
+
+                <TextView
+                    android:id="@+id/item_pacote_descricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:text="Aéreo + Hotel All Incluse"
+                    android:paddingTop="8dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tint="@android:color/darker_gray"
+                        android:src="@drawable/ic_outline_wb_sunny_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/item_pacote_diarias"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:text="05 Diárias"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="8dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tint="@android:color/darker_gray"
+                        android:src="@drawable/ic_outline_person_outline_24"
+                        />
+
+                    <TextView
+                        android:id="@+id/item_pacote_num_pessoas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        tools:text="01 Pessoa"
+                        android:layout_marginStart="4dp"
+
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/item_pacote_preco_antigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="A partir de R$ "
+                    android:paddingTop="4dp"
+                    />
+
+                <TextView
+                    android:id="@+id/item_pacote_preco_atual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="R$ "
+                    android:textColor="@color/orange_custom"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:text="Cancelamento Grátis"
+                    android:textColor="@color/custom_green"
+                    android:paddingTop="4dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

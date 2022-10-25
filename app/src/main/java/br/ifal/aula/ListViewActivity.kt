@@ -2,33 +2,51 @@ package br.ifal.aula
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
 
 class ListViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_view)
-        val lista = arrayListOf<Contato>(
-            Contato(
+        setContentView(R.layout.activity_pacotes_destaques)
 
-                "Chatinho do IFAL",
-                "Oi Sumida.. rsrs",
-                status = "Agora"
+        val lista: ArrayList<PacoteTuristico> = arrayListOf(
+            PacoteTuristico(
+                R.drawable.cancun,
+                "Pacote Cancún 2023",
+                "Aéreo + Aluguel de Carros",
+                "03 Diárias",
+                "02 Pessoas",
+                5600.0,
+                3260.0
             ),
-            Contato(
-                "Carinha de logistica",
-                "Oi Moça.. vamo tomar um açai?",
-                status = "Hoje"
+            PacoteTuristico(
+                R.drawable.cancun,
+                "Pacote Cancún 2023",
+                "Aéreo + Aluguel de Carros",
+                "03 Diárias",
+                "02 Pessoas",
+                5600.0,
+                3260.0
+            ),PacoteTuristico(
+                R.drawable.cancun,
+                "Pacote Cancún 2023",
+                "Aéreo + Aluguel de Carros",
+                "03 Diárias",
+                "02 Pessoas",
+                5600.0,
+                3260.0
+            ),PacoteTuristico(
+                R.drawable.cancun,
+                "Pacote Cancún 2023",
+                "Aéreo + Aluguel de Carros",
+                "03 Diárias",
+                "02 Pessoas",
+                5600.0,
+                3260.0
             ),
-            Contato(
-                "Varao da igreja",
-                "Oi varoa.. vamos pra oração hoje?",
-                "Ontem"
-            )
         )
 
         val listView = findViewById<ListView>(R.id.listview_main)
-        listView.adapter = ContatoAdapter(this, lista)
+        listView.adapter = PacoteAdapter(this, lista)
     }
 }
