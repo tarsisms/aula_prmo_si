@@ -1,5 +1,7 @@
 package br.ifal.aula
 
+import java.io.Serializable
+
 class PacoteTuristico(
     val image: Int,
     val titulo: String,
@@ -8,4 +10,4 @@ class PacoteTuristico(
     val pessoas: String,
     val precoAntigo: Double,
     val precoAtual: Double,
-)
+) : Serializable

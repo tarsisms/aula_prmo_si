@@ -1,5 +1,6 @@
 package br.ifal.aula
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -21,23 +22,25 @@ class ListViewActivity : AppCompatActivity() {
             ),
             PacoteTuristico(
                 R.drawable.cancun,
-                "Pacote Cancún 2023",
+                "Pacote Fortaleza 2022",
                 "Aéreo + Aluguel de Carros",
                 "03 Diárias",
                 "02 Pessoas",
                 5600.0,
                 3260.0
-            ),PacoteTuristico(
+            ),
+            PacoteTuristico(
                 R.drawable.cancun,
-                "Pacote Cancún 2023",
+                "Pacote Maceió 2021",
                 "Aéreo + Aluguel de Carros",
                 "03 Diárias",
                 "02 Pessoas",
                 5600.0,
                 3260.0
-            ),PacoteTuristico(
+            ),
+            PacoteTuristico(
                 R.drawable.cancun,
-                "Pacote Cancún 2023",
+                "Pacote Maragogi 2023",
                 "Aéreo + Aluguel de Carros",
                 "03 Diárias",
                 "02 Pessoas",
@@ -48,5 +51,14 @@ class ListViewActivity : AppCompatActivity() {
 
         val listView = findViewById<ListView>(R.id.listview_main)
         listView.adapter = PacoteAdapter(this, lista)
+
+        listView.setOnItemClickListener { adapterView, view, position, id ->
+            var intent = Intent(this, PacoteDetailActivity::class.java)
+
+            val pacote = lista[position]
+            intent.putExtra("pacote", pacote)
+
+            startActivity(intent)
+        }
     }
 }
