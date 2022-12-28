@@ -1,8 +1,12 @@
-package br.ifal.aula
+package br.ifal.aula.domain
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
-class PacoteTuristico(
+@Entity
+class Pacote(
+    @PrimaryKey(autoGenerate = true) val id : Long = 0L,
     val image: Int,
     val titulo: String,
     val descricao: String,
